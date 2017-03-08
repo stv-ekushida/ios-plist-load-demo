@@ -14,6 +14,9 @@
 		BCEC387C1E6FED79000DD879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCEC387A1E6FED79000DD879 /* LaunchScreen.storyboard */; };
 		BCEC38871E6FED79000DD879 /* ios_plist_load_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38861E6FED79000DD879 /* ios_plist_load_demoTests.swift */; };
 		BCEC38921E6FED79000DD879 /* ios_plist_load_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38911E6FED79000DD879 /* ios_plist_load_demoUITests.swift */; };
+		BCEC38A01E6FED8F000DD879 /* source.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCEC389F1E6FED8F000DD879 /* source.plist */; };
+		BCEC38A21E6FEF6A000DD879 /* PlistHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38A11E6FEF6A000DD879 /* PlistHelper.swift */; };
+		BCEC38A41E6FF02F000DD879 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38A31E6FF02F000DD879 /* Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BCEC388D1E6FED79000DD879 /* ios-plist-load-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-plist-load-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEC38911E6FED79000DD879 /* ios_plist_load_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_plist_load_demoUITests.swift; sourceTree = "<group>"; };
 		BCEC38931E6FED79000DD879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCEC389F1E6FED8F000DD879 /* source.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = source.plist; sourceTree = "<group>"; };
+		BCEC38A11E6FEF6A000DD879 /* PlistHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistHelper.swift; sourceTree = "<group>"; };
+		BCEC38A31E6FF02F000DD879 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +83,10 @@
 		BCEC38651E6FED79000DD879 = {
 			isa = PBXGroup;
 			children = (
+				BCEC386F1E6FED79000DD879 /* Products */,
 				BCEC38701E6FED79000DD879 /* ios-plist-load-demo */,
 				BCEC38851E6FED79000DD879 /* ios-plist-load-demoTests */,
 				BCEC38901E6FED79000DD879 /* ios-plist-load-demoUITests */,
-				BCEC386F1E6FED79000DD879 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +103,10 @@
 		BCEC38701E6FED79000DD879 /* ios-plist-load-demo */ = {
 			isa = PBXGroup;
 			children = (
-				BCEC38711E6FED79000DD879 /* AppDelegate.swift */,
-				BCEC38731E6FED79000DD879 /* ViewController.swift */,
-				BCEC38751E6FED79000DD879 /* Main.storyboard */,
-				BCEC38781E6FED79000DD879 /* Assets.xcassets */,
-				BCEC387A1E6FED79000DD879 /* LaunchScreen.storyboard */,
+				BCEC38A71E6FF3D6000DD879 /* Controllers */,
+				BCEC38A61E6FF3CA000DD879 /* Helpers */,
+				BCEC38A51E6FF3BD000DD879 /* Models */,
+				BCEC38A81E6FF3E2000DD879 /* Others */,
 				BCEC387D1E6FED79000DD879 /* Info.plist */,
 			);
 			path = "ios-plist-load-demo";
@@ -110,8 +115,8 @@
 		BCEC38851E6FED79000DD879 /* ios-plist-load-demoTests */ = {
 			isa = PBXGroup;
 			children = (
-				BCEC38861E6FED79000DD879 /* ios_plist_load_demoTests.swift */,
 				BCEC38881E6FED79000DD879 /* Info.plist */,
+				BCEC38861E6FED79000DD879 /* ios_plist_load_demoTests.swift */,
 			);
 			path = "ios-plist-load-demoTests";
 			sourceTree = "<group>";
@@ -119,10 +124,50 @@
 		BCEC38901E6FED79000DD879 /* ios-plist-load-demoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BCEC38911E6FED79000DD879 /* ios_plist_load_demoUITests.swift */,
 				BCEC38931E6FED79000DD879 /* Info.plist */,
+				BCEC38911E6FED79000DD879 /* ios_plist_load_demoUITests.swift */,
 			);
 			path = "ios-plist-load-demoUITests";
+			sourceTree = "<group>";
+		};
+		BCEC38A51E6FF3BD000DD879 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCEC38A31E6FF02F000DD879 /* Info.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCEC38A61E6FF3CA000DD879 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BCEC38A11E6FEF6A000DD879 /* PlistHelper.swift */,
+			);
+			name = Helpers;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BCEC38A71E6FF3D6000DD879 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCEC38751E6FED79000DD879 /* Main.storyboard */,
+				BCEC38731E6FED79000DD879 /* ViewController.swift */,
+			);
+			name = Controllers;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BCEC38A81E6FF3E2000DD879 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BCEC38711E6FED79000DD879 /* AppDelegate.swift */,
+				BCEC38781E6FED79000DD879 /* Assets.xcassets */,
+				BCEC387A1E6FED79000DD879 /* LaunchScreen.storyboard */,
+				BCEC389F1E6FED8F000DD879 /* source.plist */,
+			);
+			name = Others;
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +280,7 @@
 				BCEC387C1E6FED79000DD879 /* LaunchScreen.storyboard in Resources */,
 				BCEC38791E6FED79000DD879 /* Assets.xcassets in Resources */,
 				BCEC38771E6FED79000DD879 /* Main.storyboard in Resources */,
+				BCEC38A01E6FED8F000DD879 /* source.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCEC38741E6FED79000DD879 /* ViewController.swift in Sources */,
+				BCEC38A21E6FEF6A000DD879 /* PlistHelper.swift in Sources */,
+				BCEC38A41E6FF02F000DD879 /* Info.swift in Sources */,
 				BCEC38721E6FED79000DD879 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +350,7 @@
 				BCEC38761E6FED79000DD879 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		BCEC387A1E6FED79000DD879 /* LaunchScreen.storyboard */ = {
@@ -310,6 +359,7 @@
 				BCEC387B1E6FED79000DD879 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
